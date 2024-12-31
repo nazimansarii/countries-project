@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className={`header-container ${isDark? 'dark' : ''}`}>
       <div className="header-content">
-        <h2 className="main-title">Where in the world?</h2>
+        <h2 className="main-title">Where in the </h2>
         <button className="drk" onClick={() => {
           setIsDark(!isDark)
           localStorage.setItem('isDark', !isDark)
