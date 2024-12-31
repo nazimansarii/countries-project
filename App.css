@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --background-color: white;
+  --text-color: black;
+  --element-color: white;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+
+}
+
+main, header, .theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+main.dark, header.dark, .theme.dark {
+  --background-color: hsl(207, 26%, 17%);
+  --text-color: white;
+  --element-color: hsl(209, 23%, 22%);
+}
+main {
+  margin-top: 65px;
+  padding-block: 24px;
+}
+a {
+  text-decoration-line: none;
+  color: inherit;
+}
+
+.header-container {
+  padding-inline: 24px;
+  background-color: var(--element-color);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.drk {
+  background-color: inherit;
+  outline: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.countries-container {
+  max-width: 1200px;
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 32px;
+  margin-inline: auto;
+}
+
+.search-fillter-container {
+  max-width: 1280px;
+  margin-inline: auto;
+  display: flex;
+  gap: 16px;
+  padding-inline: 24px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.search {
+  box-shadow: 0 0 4px 0 #ccc;
+  border-radius: 2px;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  width: 300px;
+}
+
+.search input {
+  width: 100%;
+  background-color: inherit;
+  color: inherit;
+}
+.search-fillter-container select {
+  box-shadow: 0 0 4px 0 #ccc;
+  border-radius: 2px;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: inherit;
+  color: inherit;
+}
+
+.search i {
+  color: #ddd;
+  margin-right: 12px;
+  font-size: 13px;
+}
+.search input,
+select {
+  border: none;
+  outline: none;
+}
+
+.countries-content {
+  display: inline-block;
+  width: 250px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  transition: all 0.2s;
+  background-color: var(--element-color);
+}
+
+.flag-box{
+  height: 160px;
+  overflow: hidden;
+} 
+
+.countries-content img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.countries-content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countries-content img {
+  width: 100%;
+  box-shadow: 0 0 8px 0 #ccc;
+}
+
+.countries-text {
+  padding-inline: 12px;
+}
+.countries-title {
+  margin-block: 12px;
+  margin-inline: 16px;
+}
+
+.countries-text p {
+  margin-block: 8px;
+  margin-inline: 16px;
+}
+
+@media (max-width: 768px) {
+  .main-title,
+  .drk {
+    font-size: 15px;
+  }
+
+  main{
+    margin-top: 0px;
+  }
+}
